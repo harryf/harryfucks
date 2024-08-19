@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         CMS.init({
           config: {
             backend: {
-              name: "github",
-              repo: "harryf/harryfucks",
-              branch: "main",
-              auth_scope: "public_repo"
+              name: "git-gateway",
+              branch: "main", // Branch to update (optional; defaults to master)
             },
             media_folder: "assets/uploads",
-            public_folder: "/assets/uploads",
             collections: [
               {
-                name: "posts",
-                label: "Posts",
-                folder: "_posts",
-                create: true,
-                fields: [
-                  { label: "Title", name: "title", widget: "string" },
-                  { label: "Body", name: "body", widget: "markdown" }
-                ]
+                name: "blog",
+                label: "Blog",
+                folder: "_posts/",
+                fields: [{ name: "Title", widget: "string" }]
               }
             ]
           }

@@ -1,15 +1,13 @@
 backend:
-  name: github
-  repo: harryf/harryfucks # Your GitHub username and repository
+  name: git-gateway
   branch: main
-  auth_scope: public_repo
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "posts"
-    label: "Posts"
+  - name: "blog"
+    label: "Blog"
     folder: "_posts"
     create: true
     fields:
