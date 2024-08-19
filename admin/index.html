@@ -1,12 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
-  <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <script src="https://unpkg.com/netlify-cms@^2.0/dist/cms.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Content Manager</title>
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  </head>
+  <body>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            name: "github",
+            repo: harryf/harryfucks", // Replace with your GitHub username and repository name
+            branch: "main"
+          },
+          media_folder: "assets/uploads",
+          public_folder: "/assets/uploads",
+          collections: [
+            {
+              name: "posts",
+              label: "Posts",
+              folder: "_posts",
+              create: true,
+              fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Body", name: "body", widget: "markdown" }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
+  </body>
 </html>
