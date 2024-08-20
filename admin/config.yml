@@ -15,4 +15,5 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Ticket URL", name: "ticket_url", widget: "string" }
+      - { label: "Show Info", name: "show_info", widget: "string" }
       - { label: "Order", name: "order", widget: "number" }
