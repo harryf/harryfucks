@@ -17,11 +17,9 @@ collections:
       - { label: "Ticket URL", name: "ticket_url", widget: "string" }
       - { label: "Show Info", name: "show_info", widget: "string" }
       - { label: "Order", name: "order", widget: "number" }
-- name: "shows"
+  - name: "shows"
     label: "Shows"
     folder: "pages/_shows"
-    editor:
-      preview: false
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "page"}
