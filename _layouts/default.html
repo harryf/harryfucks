@@ -7,9 +7,9 @@
     {% endif %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.tagline }} - {{ site.name }}</title>
+    <title>{{ site.name }}</title>
     <link rel="shortcut icon" href="{{ site.favicon.path }}" type="image/{{ site.favicon.type }}">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="/assets/style.css">
     <script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
     <meta name="description" content="{{ site.description }}">
     <meta property="og:title" content="{{ site.name }}" />
@@ -33,7 +33,7 @@
     <div class="container is-full-screen">
         <header>
             <div class="top is-center is-vertical-align">
-                <img class="is-rounded" width="75px" height="75px" src="{{ site.logo }}" alt="logo">
+                <a href="/"><img class="is-rounded" width="75px" height="75px" src="{{ site.logo }}" alt="logo"></a>
                 <h1 class="text-center">{{ site.name }}{% if site.badge.enable == true %}<span class="iconify-inline badge"
                         data-icon="{{ site.badge.icon }}" style="color: {{ site.badge.color }}"></span>{% endif %}</h1>
                 <p class="text-center">{{ site.description }}</p>
@@ -43,15 +43,11 @@
         <!-- Social Media Links -->
         {% include social.html %}
 
-        <!-- Insta/TikTok/YouTube Link-in-bio -->
-        {% include bio.html %}
-
-        <!-- Link Buttons -->
-        {% include links.html %}
+        {{ content }}
 
         {% include footer.html %}
     </div>
-    <script src="assets/script.js"></script>
+    <script src="/assets/script.js"></script>
 </body>
 
 </html>

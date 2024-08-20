@@ -1,0 +1,13 @@
+<section>
+    <details>
+        <summary class="text-center text-success">Other Things</summary>
+        <div class="bio-gallery">
+            {% for thing in site.things %}
+            <div class="bio-item">
+                <a href="{{ show.permalink }}" target="_blank" aria-label="{{ thing.title }} link-in-bio">
+                    <img class="bio-img text-center" src="{{ thing.image }}" width="100%" height="100%"
+                        alt="{{ thing.title }} post"></a>
+            </div>
+            {% endfor %}
+        </div>
+    </details>

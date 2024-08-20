@@ -1,24 +1,24 @@
-- name: instagram
-  url: https://www.instagram.com/harryf.cks
-  icon: ri:instagram-fill
-  color: '#E4405F'
-
 - name: tiktok
   url: https://www.tiktok.com/@harryf.cks
   icon: ri:tiktok-fill
-  color: '#69C9D0'
+  color: '#f3f3f6'
 
-- name: facebook
-  url: https://www.facebook.com/harryf.ckscomedy
-  icon: ri:facebook-fill
-  color: '#1877F2'
-
-- name: youtube
-  url: https://www.youtube.com/@harryfucks
-  icon: ri:youtube-fill
-  color: '#FF0000'
+- name: instagram
+  url: https://www.instagram.com/harryf.cks
+  icon: ri:instagram-fill
+  color: '#f3f3f6'
 
 - name: x
   url: https://x.com/harryf
   icon: ri:twitter-x-fill
-  color: '#1D9BF0'
+  color: '#f3f3f6'
+
+- name: youtube
+  url: https://www.youtube.com/@harryfucks
+  icon: ri:youtube-fill
+  color: '#f3f3f6'
+
+- name: facebook
+  url: https://www.facebook.com/harryf.ckscomedy
+  icon: ri:facebook-fill
+  color: '#f3f3f6'

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 :root {
     --bg-color: #fff;
@@ -6,7 +7,7 @@
     --color-primary: #168D54;
     --color-grey: #3f4144;
     --color-error: #D74747;
-    --color-success: #28bd14;
+    --color-success: #00FF7F;
     --grid-maxWidth: 120rem;
     --grid-gutter: 2rem;
     --font-size: 1.6rem;
@@ -36,8 +37,7 @@ body {
     line-height: 1.6;
     font-size: var(--font-size);
     color: var(--font-color);
-    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
-    font-family: var(--font-family-sans);
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0
 }
@@ -49,10 +49,14 @@ body.dark {
     --color-grey: #ccc
 }
 
-h1, h2 {
+h1 {
     font-family: 'Bangers', sans-serif;
     font-weight: 500;
     margin: .35em 0 .6em
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -72,12 +76,18 @@ a {
     text-decoration: none
 }
 
+a.clickme {
+    color: var(--color-error);
+    text-decoration: underline;
+}
+
 a:hover:not(.button) {
     opacity: .75
 }
 
 p {
-    margin-top: 0
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 img {
@@ -130,27 +140,49 @@ img {
     cursor: pointer
 }
 
-.button.secondary {
-    color: #fff;
-    z-index: 1;
-    background-color: #000
-}
-
 .button:hover {
     opacity: .8
 }
 
 .button.secondary {
-    background-color: var(--color-grey)
-}
-
-.button.outline {
-    background-color: transparent
+    color: #fff;
+    z-index: 1;
+    background-color: #000;
+    background-color: var(--color-grey);
 }
 
 .button.outline.secondary {
+    /* background: linear-gradient(45deg, #5555ff, #ffaa55); Subtle blue to orange gradient */
+    color: #fff;
     border-color: var(--color-grey);
-    color: var(--color-grey)
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow for subtlety */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.button.outline.secondary:hover {
+    background: linear-gradient(45deg, #4444dd, #ff9955); /* Slightly darker on hover */
+    transform: scale(1.02); /* Gentle scale on hover */
+}
+
+.button.outline.secondary svg {
+    color: #fff; /* Keep icon color to match the text */
+}
+
+.button.outline.secondary {
+    font-size: 1.4rem; /* Increase font size slightly */
+    color: #ffffff; /* Use pure white for text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle shadow for better contrast */
+}
+
+.button.outline.secondary {
+    border-radius: 8px; /* Slightly round the corners */
+    padding: 1rem 2rem; /* Adjust padding for better spacing */
+}
+
+
+.button.outline {
+    background-color: transparent
 }
 
 .button:active:not(:disabled), [type=button]:active:not(:disabled), [type=reset]:active:not(:disabled), [type=submit]:active:not(:disabled), button:active:not(:disabled) {
@@ -242,16 +274,32 @@ img {
 }
 
 .text-success {
-    color: var(--color-success) !important
+    color: var(--color-success) !important;
+    font-weight: bold;
+    /* font-size: 1.3rem; */
+}
+
+.text-success:hover {
+    color: #32CD32;
 }
 
 .text-center {
     text-align: center
 }
 
+p {
+    font-family: 'Poppins', sans-serif;
+    /* font-size: 1.2rem; */
+}
+
 .is-full-screen {
     width: 100%;
     min-height: 100vh
+}
+
+.container.is-full-screen {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
 }
 
 .is-center, .is-vertical-align {
@@ -336,6 +384,104 @@ footer {
     margin-top: .5em;
     margin-bottom: 2em
 }
+
+form[name="contact"] {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary-color); /* Use your site's secondary background color */
+    border-radius: 8px; /* Add some rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+form[name="contact"] p {
+    margin-bottom: 1.5rem; /* Space out the form fields */
+}
+
+form[name="contact"] label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--font-color); /* Use your site's font color */
+}
+
+form[name="contact"] input[type="text"],
+form[name="contact"] input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: var(--font-size);
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    background-color: var(--bg-color); /* Use the main background color */
+    color: var(--font-color); /* Use your site's font color */
+}
+
+form[name="contact"] input[type="text"]:focus,
+form[name="contact"] input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-primary); /* Highlight border color on focus */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+form[name="contact"] button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--font-size);
+    color: #fff;
+    background-color: var(--color-primary); /* Use your primary color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+form[name="contact"] button[type="submit"]:hover {
+    background-color: var(--color-primary-hover); /* Slightly darker shade of your primary color */
+}
+
+/* Subpage Specific Styles */
+.page-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.page-body {
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
+    line-height: 1.8;
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-body p {
+    margin-bottom: 1.5rem;
+}
+
+.page-body a {
+    color: #00FF7F; /* Neon Green */
+    text-decoration: underline;
+}
+
+.page-body a:hover {
+    color: #32CD32; /* Lime Green */
+    text-decoration: none;
+}
+
+
 
 @media screen and (max-width:599px) {
     .container {

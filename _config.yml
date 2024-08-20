@@ -3,18 +3,18 @@ theme: linkhub-jekyll-theme
 name: Harry Fücks Comedy
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Ginger bearded stand-up comedian performing comedy in English out of Zürich, Switzerland
+  Join Harry Fücks, the ginger-bearded, stand-up comedian, as he navigates life over 50+, singledom, fatherhood , and tech chaos — because laughter is the only way out.
 favicon:
-  path: assets/images/favicon.png # Path / URL to the favicon of your website (e.g., 'assets/images/favicon.png')
+  path: /assets/images/favicon.png # Path / URL to the favicon of your website (e.g., 'assets/images/favicon.png')
   type: png # File format of image. Change according to your image. Supported types: https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
-logo: assets/images/harryfucks.png # Path / URL to the logo (e.g., 'assets/images/logo.png')
+logo: /assets/images/harryfucks.png # Path / URL to the logo (e.g., 'assets/images/logo.png')
 url: https://harryfucks.netlify.app/
 locale: en_GB
 ga4: # Google Analytics 4 measurement ID, for e.g. G-XXXXXXX (optional). Remove it if it’s not needed.
 twitter:
   username: harryf
 image:
-  path: assets/images/harryfucks.png # Used for SEO (og:image, twitter:image)
+  path: /assets/images/harryfucks.png # Used for SEO (og:image, twitter:image)
   type: png # File format of image.
   height: 100 # Pixels
   width: 100
@@ -37,7 +37,14 @@ collections:
   upcoming_shows:
     sort_by: order
   shows:
+    output: true
     sort_by: order
+  things:
+    output: true
+    sort_by: order
+  booking:
+    output: true
+collections_dir: pages
 
 # Exclude
 exclude: [README.md, Gemfile.lock, .jekyll-cache/, .github/, CHANGELOG.md, Gemfile, LICENSE.txt, funding.yml, linkhub-jekyll-theme.gemspec]

@@ -1,0 +1,17 @@
+<main>
+    <h2 class="text-center">Upcoming Shows</h2>
+    {% for show in site.upcoming_shows %}
+    <div class="row">
+        <div class="col link is-center">
+            <div class="text-center">
+                <h3 class="text-center force-newline text-grey">{{ show.show_info }}</h3>
+                <a class="button outline secondary" href="{{ show.ticket_url }}" target="_blank">
+                    <span class="iconify-inline" data-icon="ri:ticket-2-fill" style="margin-right:.5em;margin-left:0"></span>
+                    {{ show.title }}
+                    <span class="iconify-inline" data-icon="ri:ticket-2-fill" style="margin-left:.5em;margin-right:0"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</main>
