@@ -1,0 +1,22 @@
+- name: Shorts
+  ratio: vertical # For vertical 9:16 aspect ratio. Ideal for video thumbnails, such as those used on Instagram Reels, YouTube Shorts and TikTok. To use the default 1:1 aspect ratio (square), remove this variable.
+  items:
+    - url: https://youtube.com/shorts/w8MAt0gTqrA?si=LR0vHa0NZ7kKYKFb
+      image: assets/images/harryfucks_existence_denied.png
+
+    - url: https://youtube.com/shorts/yRAFD8T92rE?si=MEfQx17tJs89BPir
+      image: assets/images/harryfucks_bad_experience.png
+
+    - url: https://youtube.com/shorts/nhA7HhKi6QQ?si=NlxBgk0VB56NDB29
+      image: assets/images/harryfucks_german_solutions.png
+
+# - name: Instagram
+#   items:
+#     - url: https://www.example.com
+#       image: https://picsum.photos/700/400.webp # You can use paths to images in the assets folder, e.g., assets/images/insta.jpg.
+
+#     - url: https://www.example.org
+#       image: https://picsum.photos/500.webp
+
+#     - url: https://www.example.com
+#       image: https://picsum.photos/250/300.webp

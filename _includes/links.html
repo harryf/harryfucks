@@ -1,0 +1,57 @@
+<main>
+    <h2 class="text-center">Upcoming Shows</h2>
+    {% for show in site.upcoming_shows %}
+    <div class="row">
+        <div class="col link is-center">
+            <div class="text-center">
+                <h3 class="text-center force-newline">{{ show.show_info }}</h3>
+                <a class="button outline secondary" href="{{ show.ticket_url }}" target="_blank">
+                    <span class="iconify-inline" data-icon="ri:ticket-2-fill" style="margin-right:.5em;margin-left:0"></span>
+                    {{ show.name }}
+                    <span class="iconify-inline" data-icon="ri:ticket-2-fill" style="margin-left:.5em;margin-right:0"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for button in site.data.links.buttons %}
+    <h2 class="text-center">{{ button.category }}</h2>
+    {% for item in button.items %}
+    <div class="row">
+        {% if item.tag %}
+        <div class="col link is-center">
+            {% else %}
+            <div class="col is-center">
+                {% endif %}
+                {% if site.data.links.fixed-button-width == true %}
+                <a class="button outline secondary" style="width:50%" href="{{ item.url }}" target="_blank">{% else %}<a class="button outline secondary" href="{{ item.url }}" target="_blank">{% endif %}{% if site.data.links.icon-position == "right" %}{% if item.tag %}<span class="tag is-small bd-success text-success" style="margin-right:.5em">{{ item.tag}}</span>{% endif %}{{ item.title }}{% if item.icon %}<span class="iconify-inline" data-icon="{{ item.icon }}" style="margin-left:.5em;margin-right:0"></span>{% endif %}{% if item.custom-icon %}<span class="custom-icon" style="margin-left:.5em">{{ item.custom-icon }}</span>{% endif %}</a>{% else %}{% if item.icon %}<span class="iconify-inline" data-icon="{{ item.icon }}"></span>{% endif %}{% if item.custom-icon %}<span class="custom-icon" style="margin-right:.5em">{{ item.custom-icon}}</span>{% endif %}{{ item.title }}{% if item.tag %}<span class="tag is-small bd-success text-success" style="margin-left:.5em">{{ item.tag }}</span>{% endif %}</a>{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+        {% endfor %}
+</main>
+
+<section>
+    <details>
+        <summary class="text-center text-error">Shows</summary>
+    </details>
+</section>
+
+<section>
+    <details>
+        <summary class="text-center text-error">For Promoters</summary>
+        <ul>
+            <li>BIO:</li>
+            <li>Text:</li>
+            <li>Performed with:</li>
+            <li>Photos:</li>
+        </ul>
+    </details>
+</section>
+
+<section>
+    <details>
+        <summary class="text-center text-error">Other Stuff</summary>
+    </details>
+</section>

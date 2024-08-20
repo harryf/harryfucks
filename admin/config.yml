@@ -6,10 +6,13 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "_posts"
+  - name: "upcoming_shows"
+    label: "Upcoming Shows"
+    folder: "_upcoming_shows"
+    editor:
+      preview: false
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Ticket URL", name: "ticket_url", widget: "string" }
+      - { label: "Order", name: "order", widget: "number" }

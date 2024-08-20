@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.8"
+gem "jekyll", "~> 4.3"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 
@@ -35,4 +35,5 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "webrick", "~> 1.8"
 gem "faraday-retry", "~> 2.2"
 gem 'kramdown-parser-gfm'
+gem "linkhub-jekyll-theme"
 
