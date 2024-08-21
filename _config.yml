@@ -10,7 +10,7 @@ favicon:
 logo: /assets/images/harryfucks.png # Path / URL to the logo (e.g., 'assets/images/logo.png')
 url: https://harryfucks.netlify.app/
 locale: en_GB
-ga4: # Google Analytics 4 measurement ID, for e.g. G-XXXXXXX (optional). Remove it if it’s not needed.
+ga4: G-7M07W8HVGF # Google Analytics 4 measurement ID, for e.g. G-XXXXXXX (optional). Remove it if it’s not needed.
 twitter:
   username: harryf
 image:
