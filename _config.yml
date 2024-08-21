@@ -8,7 +8,7 @@ favicon:
   path: /assets/images/favicon.png # Path / URL to the favicon of your website (e.g., 'assets/images/favicon.png')
   type: png # File format of image. Change according to your image. Supported types: https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
 logo: /assets/images/harryfucks.png # Path / URL to the logo (e.g., 'assets/images/logo.png')
-url: https://harryfucks.netlify.app/
+url: https://harryf.ckscomedy.com
 locale: en_GB
 ga4: G-7M07W8HVGF # Google Analytics 4 measurement ID, for e.g. G-XXXXXXX (optional). Remove it if it’s not needed.
 twitter:
