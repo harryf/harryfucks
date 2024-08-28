@@ -2,18 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 :root {
-    --bg-color: #fff;
-    --bg-secondary-color: #f3f3f6;
-    --color-primary: #168D54;
+    /* Base colors */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-light-grey: #f3f3f6;
     --color-grey: #3f4144;
+    --color-dark-grey: #ccc;
+    --color-primary: #168D54;
+    --color-primary-hover: #126e42;
     --color-error: #D74747;
     --color-success: #00FF7F;
-    --grid-maxWidth: 120rem;
+    --color-success-hover: #32CD32;
+    --color-neon-green: #00FF7F;
+    --color-lime-green: #32CD32;
+
+    /* Light theme */
+    --bg-color: var(--color-white);
+    --bg-secondary-color: var(--color-light-grey);
+    --font-color: #333;
+
+    /* Dark theme */
+    --bg-color-dark: #0c0c0c;
+    --bg-secondary-color-dark: #131316;
+    --font-color-dark: #f5f5f5;
+
+    /* Other variables */
     --grid-gutter: 2rem;
     --font-size: 1.6rem;
-    --font-color: #333;
-    --font-family-sans: -apple-system, "BlinkMacSystemFont", "Avenir", "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --font-family-mono: monaco, "Consolas", "Lucida Console", monospace
+
+    /* Font variables */
+    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    --font-heading: 'Bangers', 'Impact', 'Arial Black', sans-serif;
 }
 
 html {
@@ -37,26 +56,26 @@ body {
     line-height: 1.6;
     font-size: var(--font-size);
     color: var(--font-color);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-primary);
     margin: 0;
     padding: 0
 }
 
 body.dark {
-    --bg-color: #0c0c0c;
-    --bg-secondary-color: #131316;
-    --font-color: #f5f5f5;
-    --color-grey: #ccc
+    --bg-color: var(--bg-color-dark);
+    --bg-secondary-color: var(--bg-secondary-color-dark);
+    --font-color: var(--font-color-dark);
+    --color-grey: var(--color-dark-grey);
 }
 
 h1 {
-    font-family: 'Bangers', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 500;
     margin: .35em 0 .6em
 }
 
 h2, h3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-primary);
 }
 
 h1 {
@@ -87,7 +106,7 @@ a:hover:not(.button) {
 
 p {
     margin-top: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-primary);
 }
 
 img {
@@ -145,41 +164,35 @@ img {
 }
 
 .button.secondary {
-    color: #fff;
+    color: var(--color-white);
     z-index: 1;
-    background-color: #000;
+    background-color: var(--color-black);
     background-color: var(--color-grey);
 }
 
 .button.outline.secondary {
-    /* background: linear-gradient(45deg, #5555ff, #ffaa55); Subtle blue to orange gradient */
-    color: #fff;
+    color: var(--color-white);
     border-color: var(--color-grey);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow for subtlety */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .button.outline.secondary:hover {
-    background: linear-gradient(45deg, #4444dd, #ff9955); /* Slightly darker on hover */
-    transform: scale(1.02); /* Gentle scale on hover */
+    background: linear-gradient(45deg, #4444dd, #ff9955);
+    transform: scale(1.02);
 }
 
 .button.outline.secondary svg {
-    color: #fff; /* Keep icon color to match the text */
+    color: var(--color-white);
 }
 
 .button.outline.secondary {
-    font-size: 1.4rem; /* Increase font size slightly */
-    color: #ffffff; /* Use pure white for text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle shadow for better contrast */
+    font-size: 1.4rem;
+    border-radius: 8px;
+    padding: 1rem 2rem;
 }
-
-.button.outline.secondary {
-    border-radius: 8px; /* Slightly round the corners */
-    padding: 1rem 2rem; /* Adjust padding for better spacing */
-}
-
 
 .button.outline {
     background-color: transparent
@@ -276,11 +289,10 @@ img {
 .text-success {
     color: var(--color-success) !important;
     font-weight: bold;
-    /* font-size: 1.3rem; */
 }
 
 .text-success:hover {
-    color: #32CD32;
+    color: var(--color-success-hover);
 }
 
 .text-center {
@@ -288,8 +300,7 @@ img {
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    /* font-size: 1.2rem; */
+    font-family: var(--font-primary);
 }
 
 .is-full-screen {
@@ -389,20 +400,20 @@ form[name="contact"] {
     max-width: 600px;
     margin: 0 auto;
     padding: 1.5rem;
-    background-color: var(--bg-secondary-color); /* Use your site's secondary background color */
-    border-radius: 8px; /* Add some rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    background-color: var(--bg-secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form[name="contact"] p {
-    margin-bottom: 1.5rem; /* Space out the form fields */
+    margin-bottom: 1.5rem;
 }
 
 form[name="contact"] label {
     display: block;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--font-color); /* Use your site's font color */
+    color: var(--font-color);
 }
 
 form[name="contact"] input[type="text"],
@@ -412,14 +423,14 @@ form[name="contact"] input[type="email"] {
     font-size: var(--font-size);
     border: 1px solid var(--color-grey);
     border-radius: 4px;
-    background-color: var(--bg-color); /* Use the main background color */
-    color: var(--font-color); /* Use your site's font color */
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 form[name="contact"] input[type="text"]:focus,
 form[name="contact"] input[type="email"]:focus {
     outline: none;
-    border-color: var(--color-primary); /* Highlight border color on focus */
+    border-color: var(--color-primary);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -428,8 +439,8 @@ form[name="contact"] button[type="submit"] {
     width: 100%;
     padding: 1rem;
     font-size: var(--font-size);
-    color: #fff;
-    background-color: var(--color-primary); /* Use your primary color */
+    color: var(--color-white);
+    background-color: var(--color-primary);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -438,14 +449,14 @@ form[name="contact"] button[type="submit"] {
 }
 
 form[name="contact"] button[type="submit"]:hover {
-    background-color: var(--color-primary-hover); /* Slightly darker shade of your primary color */
+    background-color: var(--color-primary-hover);
 }
 
 /* Subpage Specific Styles */
 .page-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-primary);
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
@@ -458,7 +469,7 @@ form[name="contact"] button[type="submit"]:hover {
 }
 
 .page-body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-primary);
     color: #e0e0e0;
     line-height: 1.8;
     background-color: #1e1e1e;
@@ -472,16 +483,14 @@ form[name="contact"] button[type="submit"]:hover {
 }
 
 .page-body a {
-    color: #00FF7F; /* Neon Green */
+    color: var(--color-neon-green);
     text-decoration: underline;
 }
 
 .page-body a:hover {
-    color: #32CD32; /* Lime Green */
+    color: var(--color-lime-green);
     text-decoration: none;
 }
-
-
 
 @media screen and (max-width:599px) {
     .container {
