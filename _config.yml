@@ -1,38 +1,59 @@
+# Theme configuration
 theme: linkhub-jekyll-theme
 
+# Site information
 name: Harry Fücks Comedy
-# email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Join Harry Fücks, the ginger-bearded, stand-up comedian, as he navigates life over 50+, singledom, fatherhood , and tech chaos — because laughter is the only way out.
-favicon:
-  path: /assets/images/favicon.png # Path / URL to the favicon of your website (e.g., 'assets/images/favicon.png')
-  type: png # File format of image. Change according to your image. Supported types: https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
-logo: /assets/images/harryfucks.png # Path / URL to the logo (e.g., 'assets/images/logo.png')
 url: https://harryf.ckscomedy.com
 locale: en_GB
-ga4: G-7M07W8HVGF # Google Analytics 4 measurement ID, for e.g. G-XXXXXXX (optional). Remove it if it’s not needed.
+
+# Social media
 twitter:
   username: harryf
+
+# Favicon configuration
+favicon:
+  path: /assets/images/favicon.png
+  type: png
+
+# Logo configuration
+logo: /assets/images/harryfucks.png
+
+# Open Graph image configuration
 image:
-  path: /assets/images/harryfucks.png # Used for SEO (og:image, twitter:image)
-  type: png # File format of image.
-  height: 100 # Pixels
+  path: /assets/images/harryfucks.png
+  type: png
+  height: 100
   width: 100
   alt: Harry Fücks Logo
 
 # Verified Badge Configuration
 badge:
-  enable: true # Set to 'true' or 'false' to enable / disable the badge
-  icon: ri:verified-badge-fill  # Enter the icon name for the badge from Iconify Design (https://icon-sets.iconify.design/)
-  color: '#1da1f2'  # Define the color of the badge
+  enable: true
+  icon: ri:verified-badge-fill
+  color: '#1da1f2'
 
+# Analytics and Marketing configurations
+# Google Analytics 4
+ga4:
+  enable: true
+  measurement_id: G-7M07W8HVGF
+
+# Mailchimp
+mailchimp:
+  enable: true
+  form_url: https://chimpstatic.com/mcjs-connected/js/users/1f8722669657924e883f3ea8a/f5cf3ffe7db8d421109f8151f.js
+
+# Default layout configuration
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
 
+# Collections configuration
+collections_dir: pages
 collections:
   upcoming_shows:
     sort_by: order
@@ -44,7 +65,15 @@ collections:
     sort_by: order
   booking:
     output: true
-collections_dir: pages
 
-# Exclude
-exclude: [README.md, Gemfile.lock, .jekyll-cache/, .github/, CHANGELOG.md, Gemfile, LICENSE.txt, funding.yml, linkhub-jekyll-theme.gemspec]
+# Files and directories to exclude from processing
+exclude: 
+  - README.md
+  - Gemfile.lock
+  - .jekyll-cache/
+  - .github/
+  - CHANGELOG.md
+  - Gemfile
+  - LICENSE.txt
+  - funding.yml
+  - linkhub-jekyll-theme.gemspec

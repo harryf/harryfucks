@@ -1,9 +1,11 @@
+{% if site.ga4.enable and site.ga4.measurement_id %}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4 }}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4.measurement_id }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '{{ site.ga4 }}');
+  gtag('config', '{{ site.ga4.measurement_id }}');
 </script>
+{% endif %}

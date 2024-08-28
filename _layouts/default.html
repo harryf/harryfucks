@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    {% if site.ga4 != null %}
+    {% if site.ga4.enable %}
     {% include ga4.html %}
     {% endif %}
+    {% if site.mailchimp.enable %}
     {% include mailchimp.html %}
+    {% endif %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.name }}</title>

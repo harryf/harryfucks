@@ -1,1 +1,3 @@
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/1f8722669657924e883f3ea8a/f5cf3ffe7db8d421109f8151f.js");</script>
+{% if site.mailchimp.enable and site.mailchimp.form_url %}
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","{{ site.mailchimp.form_url }}");</script>
+{% endif %}
