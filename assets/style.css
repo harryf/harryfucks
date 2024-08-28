@@ -8,13 +8,14 @@
     --color-light-grey: #f3f3f6;
     --color-grey: #3f4144;
     --color-dark-grey: #ccc;
-    --color-primary: #168D54;
-    --color-primary-hover: #126e42;
-    --color-error: #D74747;
-    --color-success: #00FF7F;
-    --color-success-hover: #32CD32;
-    --color-neon-green: #00FF7F;
-    --color-lime-green: #32CD32;
+    
+    /* Refined color palette */
+    --color-primary: #1DB954;          /* Spotify green - more vibrant */
+    --color-primary-hover: #1ED760;    /* Lighter shade for hover */
+    --color-error: #E55934;            /* Warm red - less harsh than pure red */
+    --color-success: #4CAF50;          /* Material design green - more balanced */
+    --color-success-hover: #45a049;    /* Darker shade for hover */
+    --color-accent: #1DB9C3;           /* Teal - complementary to the primary green */
 
     /* Light theme */
     --bg-color: var(--color-white);
@@ -22,9 +23,9 @@
     --font-color: #333;
 
     /* Dark theme */
-    --bg-color-dark: #0c0c0c;
-    --bg-secondary-color-dark: #131316;
-    --font-color-dark: #f5f5f5;
+    --bg-color-dark: #121212;          /* Slightly softer than pure black */
+    --bg-secondary-color-dark: #181818;/* Slightly lighter than bg-color-dark */
+    --font-color-dark: #E0E0E0;        /* Off-white for better readability */
 
     /* Other variables */
     --grid-gutter: 2rem;
@@ -180,7 +181,7 @@ img {
 }
 
 .button.outline.secondary:hover {
-    background: linear-gradient(45deg, #4444dd, #ff9955);
+    background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
     transform: scale(1.02);
 }
 
@@ -483,12 +484,12 @@ form[name="contact"] button[type="submit"]:hover {
 }
 
 .page-body a {
-    color: var(--color-neon-green);
+    color: var(--color-accent);
     text-decoration: underline;
 }
 
 .page-body a:hover {
-    color: var(--color-lime-green);
+    color: var(--color-primary);
     text-decoration: none;
 }
 
