@@ -1,0 +1,16 @@
+{% if include.collection %}
+<section class="{{ include.class }}">
+    <details>
+        <summary class="text-center text-success">{{ include.title }}</summary>
+        <div class="bio-gallery">
+            {% for item in include.collection %}
+            <div class="bio-item">
+                <a href="{{ item.permalink }}" aria-label="{{ item.title }} link-in-bio">
+                    <img class="bio-img text-center" src="{{ item.image }}" width="100%" height="100%"
+                        alt="{{ item.title }} post"></a>
+            </div>
+            {% endfor %}
+        </div>
+    </details>
+</section>
+{% endif %}

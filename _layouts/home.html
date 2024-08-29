@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
-<!-- Insta/TikTok/YouTube Link-in-bio -->
+<!-- Social links and bio -->
 {% include bio.html %}
 
-<!-- Link Buttons -->
+<!-- Upcoming Shows Dates etc -->
 {% include upcoming.html %}
 
-{% include shows.html %}
+<!-- Further sections of content, mapped to collections -->
+{% include gallery.html title="Shows" class="shows" collection=site.shows %}
+
+{% include gallery.html title="Other Things" class="things" collection=site.things %}
 
 {% include booking.html %}
-
-{% include things.html %}
