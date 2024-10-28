@@ -121,3 +121,6 @@ eval("\n\nif (true) {\n  module.exports = __webpack_require__(677);\n} else {}\n
 /******/ 	
 /******/ })()
 ;
+
+// Register the custom widget
+CMS.registerWidget('drag-drop', window.DragDropControl, window.DragDropPreview);
