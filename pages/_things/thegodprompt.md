@@ -3,9 +3,11 @@ layout: page
 title: "The God Prompt"
 summary: "The God Prompt for ChatGPT - Save 1000's in Therapy ;)"
 permalink: /thegodprompt/
-image: /assets/images/fuckscast.png
+image: /assets/images/thegodprompt.png
 order: 4
 ---
+![{{page.title}}]({{ page.image }}){:style="display:block; margin-left:auto; margin-right:auto"}
+
 This may be the ChatGPT "God Prompt" ... if you use ChatGPT a lot, try this out. I'm sharing... with answers... because it told me to be vulnerable.
 
 Here's what to do. First enter this prompt...
