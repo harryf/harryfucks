@@ -42,7 +42,7 @@ ga4:
 
 # Mailchimp
 mailchimp:
-  enable: true
+  enable: false
   form_url: https://chimpstatic.com/mcjs-connected/js/users/1f8722669657924e883f3ea8a/f5cf3ffe7db8d421109f8151f.js
 
 # Default layout configuration
